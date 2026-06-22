@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up — Question Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<div class="container auth-container">
+    <h1>Create Account</h1>
+
+    <div class="auth-card">
+        <div class="auth-tabs">
+            <a href="/login" class="auth-tab">Log In</a>
+            <a href="/signup" class="auth-tab active">Sign Up</a>
+        </div>
+
+        <!-- ERROR -->
+
+        <form action="/signup" method="post" class="auth-form">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Choose a username" required autocomplete="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Choose a password" required autocomplete="new-password">
+            </div>
+            <div>
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Repeat your password" required autocomplete="new-password">
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+    <a href="/guest" class="guest-link">No account? <span>Continue as Guest</span></a>
+
+    <p class="footer">Built by Rejoice Akosua Dzanku</p>
+</div>
+
+</body>
+</html>

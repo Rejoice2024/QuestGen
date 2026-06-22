@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In — Question Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<div class="container auth-container">
+    <h1>Welcome Back</h1>
+
+    <div class="auth-card">
+        <div class="auth-tabs">
+            <a href="/login" class="auth-tab active">Log In</a>
+            <a href="/signup" class="auth-tab">Sign Up</a>
+        </div>
+
+        <!-- ERROR -->
+
+        <form action="/login" method="post" class="auth-form">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required autocomplete="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" required autocomplete="current-password">
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    <a href="/guest" class="guest-link">No account? <span>Continue as Guest</span></a>
+
+    <p class="footer">Built by Rejoice Akosua Dzanku</p>
+</div>
+
+</body>
+</html>

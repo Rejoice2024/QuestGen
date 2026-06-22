@@ -1,6 +1,6 @@
 # Question Generator
 
-A web app that generates multiple choice quizzes on any subject and topic, grades your answers, and lets you save your results as a PDF.
+A web app that generates multiple choice quizzes on any subject and topic, grades your answers, lets you save results as a PDF, and keeps a history of every quiz you've taken.
 
 ## Quick Start
 
@@ -20,33 +20,47 @@ A web app that generates multiple choice quizzes on any subject and topic, grade
 
 ## How It Works
 
-The app runs across three pages:
+The app opens on a **Login** page. You have two options:
 
-1. **Home** — Enter a subject (e.g. History), a topic (e.g. World War II), and how many questions you want, then click Generate.
-2. **Questions** — Answer each multiple choice question and click Submit Answers.
-3. **Results** — See your score, review which answers were correct or wrong, and download your results as a PDF.
+- **Sign up / Log in** — Create an account to unlock quiz history. Your past quizzes are saved and accessible any time.
+- **Continue as Guest** — Skip sign-up and go straight to the quiz. Guest sessions are not saved.
+
+### Pages
+
+1. **Login / Sign Up** — Authenticate or continue as a guest.
+2. **Home** — Enter a subject (e.g. History), a topic (e.g. World War II), and how many questions you want, then click Generate.
+3. **Questions** — Answer each multiple choice question and click Submit Answers.
+4. **Results** — See your score, review correct and wrong answers, and download your results as a PDF.
+5. **History** *(logged-in users only)* — View all past quizzes with subject, topic, score, and the date and time each quiz was taken. Most recent quizzes appear first.
 
 ## Project Structure
 
 ```
-Quest/
+Question-Generator/
 ├── main.py                 # FastAPI app — routes and logic
 ├── requirements.txt        # Python dependencies
+├── users.json              # User accounts (auto-created on first sign-up)
+├── sessions.json           # Active login sessions (auto-created)
+├── history.json            # Per-user quiz history (auto-created)
 └── static/
     ├── index.html          # Home page template
     ├── questions.html      # Questions page template
     ├── results.html        # Results page template
+    ├── history.html        # History page template
+    ├── login.html          # Login page template
+    ├── signup.html         # Sign up page template
     └── style.css           # Shared stylesheet
 ```
 
 ## Dependencies
 
-| Package  | Purpose                            |
-|----------|------------------------------------|
-| fastapi  | Web framework                      |
-| uvicorn  | ASGI server                        |
-| requests | HTTP client for the AI API         |
-| fpdf2    | Server-side PDF generation         |
+| Package          | Purpose                            |
+|------------------|------------------------------------|
+| fastapi          | Web framework                      |
+| uvicorn          | ASGI server                        |
+| requests         | HTTP client for the AI API         |
+| fpdf2            | Server-side PDF generation         |
+| python-multipart | HTML form data parsing             |
 
 ## Built With
 
