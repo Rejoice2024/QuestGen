@@ -1,0 +1,16 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Runtime data (sensitive — do not commit)
+users.json
+sessions.json
+history.json
+
+# OS files
+.DS_Store
+Thumbs.db
