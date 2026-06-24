@@ -51,6 +51,12 @@ Question-Generator/
     ├── signup.html         # Sign up page template
     └── style.css           # Shared stylesheet
 ```
+###Future Updates
+```
+1. Leaderboards for quizes globally
+2. Achievement badges
+3. Win streaks
+```
 
 ## Dependencies
 
